@@ -126,11 +126,11 @@ body.ready .logo {
     opacity: 1;
 }
 body:not(.iOS) #lines * {
-    mix-blend-mode: color;
+    mix-blend-mode: normal;
 }
 #fills * {
     opacity: 0;
-    mix-blend-mode: color;
+    mix-blend-mode: normal;
 }
 #line-i-1 {
     transform-origin: 30em 8em;
