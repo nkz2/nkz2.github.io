@@ -21,7 +21,7 @@ var logoAnimation = function() {
         delay: function(el, i) {
             return 750 + (i * 120)
         },
-        duration: 100
+        duration: 1400
     });
     var dotJSRoll = anime({
         targets: '#dot-js',
