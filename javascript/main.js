@@ -1,6 +1,5 @@
 var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 var ff = navigator.userAgent.indexOf('Firefox') > 0;
-var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
 if (iOS) document.body.classList.add('iOS');
 
 var logoAnimation = function() {
@@ -9,7 +8,8 @@ var logoAnimation = function() {
         var l = el.getTotalLength();
         el.setAttribute('stroke-dasharray', l);
         return [l,0];
-    }
+    };
+
     var letters = anime({
         targets: '#lines path',
         strokeDashoffset: {
@@ -23,71 +23,45 @@ var logoAnimation = function() {
         },
         duration: 1400
     });
-    var dotJSRoll = anime({
-        targets: '#dot-js',
-        transform: ['translate(0 0)', 'translate(544 0)'],
-        delay: letters.duration - 800,
-        duration: 800,
-        elasticity: 300
-    });
-    var dotJSDown = anime({
-        targets: '#dot-js',
-        transform: ['translate(0 -304)', 'translate(0 0)'],
-        duration: 500,
-        elasticity: 600,
-        autoplay: false
-    });
-    var dotJSUp = anime({
-        targets: '#dot-js',
-        transform: ['translate(0 0) scale(1 3)', 'translate(0 -352) scale(1 1)'],
-        duration: 800,
-        easing: 'easeOutCirc',
-        complete: dotJSDown.play
+
+    var endletters = anime({
+        targets: '#endlines path',
+        strokeDashoffset: {
+            value: setDashoffset,
+            duration: 0
+        },
+        transform: ['translate(0 128)', 'translate(0 0)'],
+        delay: 0,
+        duration: 0
     });
 
     var letterI = anime({
         targets: '#line-i-1',
         strokeDashoffset: {
             value: setDashoffset,
-            duration: 700,
+            duration: 1700,
             easing: 'easeOutQuad'
         },
         transform: function() {
             return ff ? ['rotate(360)', 'rotate(0)'] : ['rotate(360 240 64)', 'rotate(0 240 64)'];
         },
-        duration: 2500,
+        duration: 2800,
         delay: letters.duration - 780
     });
-    var dotI = anime({
-        targets: '#dot-i',
-        transform: ['translate(0 -352) scale(1 3)', 'translate(0 0) scale(1 1)'],
-        opacity: {
-            value: [0, 1],
-            easing: 'linear',
-            duration: 100
+
+    var endletterI = anime({
+        targets: '#line-i-1',
+        strokeDashoffset: {
+            value: setDashoffset,
+            duration: 0
         },
-        delay: letters.duration + 250
-    });
-    var JSletters = anime({
-        targets: ['#line-j', '#line-s'],
-        strokeDashoffset: setDashoffset,
-        duration: 1200,
-        delay: function(el, i) { return (letterI.duration - 1400) + (i * 60) },
-        easing: 'easeInOutQuart'
-    });
-    var gradients = anime({
-        targets: '#fills *:not(#dot-i)',
-        opacity: [0, 1],
-        delay: letterI.duration - 300,
-        delay: function(el, i, l) {
-            var mid = l/2;
-            var index = (i - mid) > mid ? 0 : i;
-            var delay = Math.abs(index - mid);
-            return (letterI.duration - 1300) + (delay * 30);
+        transform: function() {
+            return ff ? ['rotate(360)', 'rotate(0)'] : ['rotate(360 240 64)', 'rotate(0 240 64)'];
         },
-        duration: 500,
-        easing: 'linear'
+        duration: 0,
+        delay: endletters.duration
     });
+
     var showDescription = anime({
         targets: ['.logo', '.description', '.links', 'footer'],
         opacity: {
@@ -100,5 +74,19 @@ var logoAnimation = function() {
         duration: 2250,
         easing: 'easeOutExpo'
     });
+
+    var endShowDescription = anime({
+        targets: ['.endlogo', '.enddescription', '.endlinks', 'footer'],
+        opacity: {
+            value: 1,
+            duration: 0
+        },
+        translateY: ['1rem', '0rem'],
+        delay: function() {console.log('hello'); return endletterI.duration},
+        duration: 0
+    });
+
 }
 window.onload = logoAnimation;
+
+
