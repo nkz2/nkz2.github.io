@@ -1,23 +1,26 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     border: 0;
     font-family: 'Lato', sans-serif;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-    font-size:14px;
+    /*vertical-align: baseline;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*font-size:14px;*/
 }
 head title {
     left: 0;
 }
 h3 {
     font-size:16px;
-    margin: 15px 15px 15px 0px;
+    margin: 15px 15px 15px 0;
 }
 li {
-    margin:8px 0px 5px 30px;
+    margin:8px 0 5px 30px;
+    font-size:14px;
 }
 p {
     padding-right:20px;
+    font-size:14px;
+
 }
 a {
     color: #A52A2A;
@@ -27,13 +30,17 @@ a:hover{
 }
 .mobileshow {
     display: none;
-    text-align:right;
-    font-size:16px;
+
+}
+.mobileshow h1 {
+    text-align:left;
     font-weight:bold;
+    font-size:35px;
     color:#303030;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .mobileshow {display:block;}
+    .mobileshow {display:inline;}
+    .section {display:none;}
 }
 
 .content {
