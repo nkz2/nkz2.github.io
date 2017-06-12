@@ -35,7 +35,7 @@ a:hover{
 .mobileshow h1 {
     text-align:left;
     font-weight:bold;
-    font-size:35px;
+    font-size:40px;
     color:#303030;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
