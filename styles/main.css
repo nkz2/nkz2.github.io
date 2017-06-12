@@ -1,49 +1,102 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0;
+    font-family: 'Lato', sans-serif;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    font-size:14px;
+}
 body {
     padding: 0 !important;
     margin: 0 !important;
 }
-.page1, .page2, .page3, .intropage {
-    position:absolute;
-    height: 1000px;
+head title {
+    left: 0;
+}
+h3 {
+    font-size:16px;
+    margin: 15px 15px 15px 0px;
+}
+li {
+    margin:8px 0px 5px 30px;
+}
+p {
+    padding-right:20px;
+}
+a {
+    color: #A52A2A;
+}
+a:hover{
+    color: #CD9B9B;
+}
+
+.content {
+    top: 125px;
+    left: 10px;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+}
+.basicInfo {
+    top:40px;
+    position: absolute;
+    text-align:left;
     width:100%;
-    left:0;
+    left: 220px;
+    color: #303030;
+    font-size:14px;
 }
-.intropage {
-    background:url(../img/pres.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.basicInfo ul{
+    top:0;
+    position: absolute;
+    list-style: none;
 }
-.page1 {
-    top:1000px;
-    background:url(../img/sunset.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.basicInfo li{
+    margin:10px;
 }
-.page2 {
-    top:2000px;
-    background:url(../img/river.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.page3 {
-    top:3000px;
-    background:url(../img/ocean.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+/*.page1, .page2, .page3, .intropage {*/
+    /*position:absolute;*/
+    /*height: 1000px;*/
+    /*width:100%;*/
+    /*left:0;*/
+/*}*/
+/*.intropage {*/
+    /*background:url(../img/pres.jpg) no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
+/*.page1 {*/
+    /*top:1000px;*/
+    /*background:url(../img/sunset.jpg) no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
+/*.page2 {*/
+    /*top:2000px;*/
+    /*background:url(../img/river.jpg) no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
+/*.page3 {*/
+    /*top:3000px;*/
+    /*background:url(../img/ocean.jpg) no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
 .container {
     top: 5%;
     height:200px;
-    position:fixed;
+    position:absolute;
     width:390px;
+    left: 10px;
 }
 
 .caution-text {
@@ -56,15 +109,7 @@ body {
     font-size: 22px;
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    border: 0;
-    font-size: 100%;
-    font-family: 'Lato', sans-serif;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block
@@ -74,9 +119,6 @@ body {
     line-height: 1
 }
 
-ol, ul {
-    list-style: none
-}
 
 blockquote, q {
     quotes: none
@@ -148,42 +190,25 @@ div {
 }
 
 section {
-    position: relative;
     z-index: 1;
     width: 18.5rem;
 }
 
 .description {
-    font-size: 14px;
-    line-height: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    top:0;
+    position:absolute;
+    left: 220px;
     color: #303030;
 }
 
 .description a{
-    text-decoration:none;
     color: #303030;
 }
 
 .description a:hover{
-    text-decoration:none;
     color: #7F7F7F;
 }
 
-.links {
-    line-height: 1.125rem;
-}
-
-.description,
-.links {
-    opacity: 0;
-    margin-bottom: 1.25rem;
-}
-
-.small {
-    font-size: .75rem;
-}
 
 /* Logo */
 .logo{
