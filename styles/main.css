@@ -38,10 +38,6 @@ a:hover{
     font-size:40px;
     color:#303030;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .mobileshow {display:inline;}
-    .desktop {display:none;}
-}
 
 .content {
     max-width: 700px;
@@ -51,6 +47,12 @@ a:hover{
     padding: 10px;
     position: absolute;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .mobileshow {display:inline;}
+    .desktop {display:none;}
+    .content {top:10px}
+}
+
 .basicInfo {
     position: absolute;
     text-align:left;
