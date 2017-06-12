@@ -25,8 +25,15 @@ a {
 a:hover{
     color: #CD9B9B;
 }
+.mobileshow {
+    display: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .mobileShow {display:inline;}
+}
 
 .content {
+    max-width: 700px;
     top: 125px;
     left: 10px;
     width: 100%;
@@ -34,7 +41,7 @@ a:hover{
     position: absolute;
 }
 .basicInfo {
-    top:40px;
+    top:5%;
     position: absolute;
     text-align:left;
     width:100%;
