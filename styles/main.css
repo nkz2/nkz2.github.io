@@ -29,7 +29,7 @@ a:hover{
     display: none;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .mobileShow {display:inline;}
+    .mobileshow {display:inline;}
 }
 
 .content {
@@ -41,7 +41,6 @@ a:hover{
     position: absolute;
 }
 .basicInfo {
-    top:5%;
     position: absolute;
     text-align:left;
     width:100%;
