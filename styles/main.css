@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     border: 0;
     font-family: 'Lato', sans-serif;
     /*vertical-align: baseline;*/
@@ -40,17 +40,18 @@ a:hover{
 }
 
 .content {
-    max-width: 700px;
+    width: 700px;
     top: 125px;
     left: 10px;
-    width: 100%;
     padding: 10px;
     position: absolute;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .mobileshow {display:inline;}
+@media only screen and (min-device-width: 120px) and (max-device-width: 480px) {
+    .mobileshow {display:inline; width:100%;}
     .desktop {display:none;}
-    .content {top:10px}
+    .content {top:10px;}
+    p, li {font-size:23px;}
+    h3 {font-size:30px;}
 }
 
 .basicInfo {
@@ -132,9 +133,9 @@ body {
 
 
 /* Logo */
-@media (min-width: 640px) {
+@media (min-width: 0px) {
     :root {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
